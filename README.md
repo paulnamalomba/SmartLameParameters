@@ -3,7 +3,7 @@
 <!-- [![CI/CD Pipeline](https://github.com/paulnamalomba/smart-lame-parameters/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/paulnamalomba/smart-lame-parameters/actions) -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A production-ready React web application that **smartly cross-calculates linear isotropic material parameters** from any two independent inputs. Deployed at [smartlameparameters.run.place](https://smartlameparameters.run.place).
+A production-ready React (TypeScript, JavaScript, CSS3) web application that **smartly cross-calculates linear isotropic material parameters** from any two independent inputs. Deployed at [www.smartlameparameters.space](https://www.smartlameparameters.space).
 
 Built by [Paul Namalomba](https://github.com/paulnamalomba).
 
@@ -355,7 +355,7 @@ See `src/calculations.ts` for the complete API.
 
 4. **Configure custom domain:**
    - In Netlify dashboard, go to Domain settings
-   - Add custom domain: `smartlameparameters.run.place`
+   - Add custom domain: `www.smartlameparameters.space`
    - Configure DNS records as instructed
 
 ### Deploy to Vercel
@@ -371,7 +371,7 @@ See `src/calculations.ts` for the complete API.
    ```
 
 3. **Configure custom domain:**
-   - In Vercel dashboard, add domain `smartlameparameters.run.place`
+   - In Vercel dashboard, add domain `www.smartlameparameters.space`
    - Update DNS records
 
 ### Deploy to AWS S3 + CloudFront
@@ -383,7 +383,7 @@ See `src/calculations.ts` for the complete API.
 
 2. **Upload to S3:**
    ```bash
-   aws s3 sync dist/ s3://smartlameparameters.run.place --delete
+   aws s3 sync dist/ s3://www.smartlameparameters.space --delete
    ```
 
 3. **Configure CloudFront:**
@@ -393,7 +393,7 @@ See `src/calculations.ts` for the complete API.
    - Add custom domain and SSL certificate
 
 4. **Update DNS:**
-   - Point `smartlameparameters.run.place` to CloudFront distribution
+   - Point `www.smartlameparameters.space` to CloudFront distribution
 
 ---
 
@@ -530,7 +530,7 @@ SOFTWARE.
 
 **Paul Namalomba**
 - GitHub: [@paulnamalomba](https://github.com/paulnamalomba)
-- Website: [smartlameparameters.run.place](https://smartlameparameters.run.place)
+- Website: [www.smartlameparameters.space](https://www.smartlameparameters.space)
 
 ---
 
@@ -563,4 +563,4 @@ SOFTWARE.
 
 ---
 
-**Ready for production deployment at smartlameparameters.run.place! 🚀**
+**Ready for production deployment at www.smartlameparameters.space! 🚀**
