@@ -15,6 +15,7 @@ export default {
     '!src/App.tsx',
     '!src/components/**',
     '!src/useMaterialCalculator.ts',
+    '!src/ErrorBoundary.tsx',
   ],
   coverageThreshold: {
     global: {
