@@ -46,6 +46,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bug in unit conversion when switching units with locked parameters
 - Bugs with types and names in calculations.ts and useMaterialCalculator.ts causing ESLint errors
 
+## [1.0.2] - 2025-12-03
+
+### Fixed
+- **Critical:** Fixed white screen issue on production deployments (Netlify & Vercel)
+- **Critical:** Fixed decimal input handling - users can now enter values like 50.2, 0.45, 210.5
+- Fixed `TypeError: Cannot read properties of undefined (reading 'toExponential')` in ResultsPanel component
+- Fixed input field preventing decimal/fractional value entry during typing
+- Added proper null/undefined/non-finite value handling in formatValue function
+- Fixed timer type compatibility issue (NodeJS.Timeout → number) for browser environments
+- Implemented local state management in InputField to preserve typing intermediate states
+
+### Added
+- Error boundary component for graceful error handling in production
+- Comprehensive error display with reload functionality
+- PWA manifest.json for progressive web app support
+- Explicit base path configuration in vite.config.ts
+
+### Improved
+- Enhanced production build configuration with optimized rollup options
+- Better error visibility and debugging in production environments
+- Improved user experience with informative error messages instead of blank screens
+
+### Documentation
+- Added FIXES.md with detailed bug fix analysis and resolution steps
+- Documented all deployment issues and their solutions
+- Added lessons learned and future recommendations
+
+### Deployment
+- Successfully deployed to Netlify: https://rainbow-daifuku-6c9b01.netlify.app
+- Successfully deployed to Vercel
+- All production deployments verified and operational
+
 ---
 
 ## Future Releases

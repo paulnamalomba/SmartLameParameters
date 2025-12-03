@@ -5,6 +5,7 @@
  * @author Paul Namalomba (https://github.com/paulnamalomba)
  */
 
+import { useState, useEffect } from 'react'
 import { ParameterKey, Unit } from '../types'
 
 interface InputFieldProps {
@@ -34,15 +35,42 @@ export function InputField({
   onUnitChange,
   onLockToggle,
 }: InputFieldProps) {
+  // Use local state to preserve input text while typing (allows decimals like "50." or "0.4")
+  const [inputText, setInputText] = useState<string>('')
+  
+  // Sync local state when external value changes (from calculations or unit conversion)
+  useEffect(() => {
+    if (value === null) {
+      setInputText('')
+    } else {
+      // Only update if not currently focused (user is typing)
+      const activeElement = document.activeElement
+      const inputId = `input-${paramKey}`
+      if (activeElement?.id !== inputId) {
+        setInputText(String(value))
+      }
+    }
+  }, [value, paramKey])
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const val = e.target.value.trim()
-    if (val === '') {
+    const val = e.target.value
+    setInputText(val)
+    
+    if (val.trim() === '') {
       onValueChange(null)
       return
     }
+    
     const parsed = parseFloat(val)
     if (!isNaN(parsed) && isFinite(parsed)) {
       onValueChange(parsed)
+    }
+  }
+  
+  const handleBlur = () => {
+    // On blur, clean up the display if needed
+    if (value !== null) {
+      setInputText(String(value))
     }
   }
 
@@ -80,8 +108,9 @@ export function InputField({
         <input
           id={inputId}
           type="text"
-          value={value === null ? '' : value}
+          value={inputText}
           onChange={handleInputChange}
+          onBlur={handleBlur}
           disabled={isDisabled}
           className={`flex-1 px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 ${
             isDisabled

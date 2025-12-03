@@ -1,0 +1,10 @@
+## [1.0.2] - 2025-12-03
+
+### Fixed
+- **Critical:** Fixed white screen issue on production deployments (Netlify & Vercel)
+- **Critical:** Fixed decimal input handling - users can now enter values like 50.2, 0.45, 210.5
+- Fixed `TypeError: Cannot read properties of undefined (reading 'toExponential')` in ResultsPanel component
+- Fixed input field preventing decimal/fractional value entry during typing
+- Added proper null/undefined/non-finite value handling in formatValue function
+- Fixed timer type compatibility issue (NodeJS.Timeout → number) for browser environments
+- Implemented local state management in InputField to preserve typing intermediate states

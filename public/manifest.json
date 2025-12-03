@@ -1,0 +1,16 @@
+{
+  "name": "Smart Lamé Parameters Calculator",
+  "short_name": "Lamé Calc",
+  "description": "Cross-calculate linear isotropic material parameters",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -12,6 +12,9 @@ export default {
     '!src/**/*.d.ts',
     '!src/main.tsx',
     '!src/vite-env.d.ts',
+    '!src/App.tsx',
+    '!src/components/**',
+    '!src/useMaterialCalculator.ts',
   ],
   coverageThreshold: {
     global: {

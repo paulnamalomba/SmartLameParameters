@@ -21,6 +21,18 @@ import {
   calculateE_from_K_mu,
   calculateNu_from_K_mu,
   calculateLambda_from_K_mu,
+  calculateMu_from_E_K,
+  calculateNu_from_E_K,
+  calculateLambda_from_E_K,
+  calculateNu_from_E_mu,
+  calculateK_from_E_mu,
+  calculateLambda_from_E_mu,
+  calculateE_from_lambda_nu,
+  calculateMu_from_lambda_nu,
+  calculateK_from_lambda_nu,
+  calculateE_from_lambda_K,
+  calculateMu_from_lambda_K,
+  calculateNu_from_lambda_K,
   calculateAllParameters,
   checkConsistency,
 } from './calculations'
@@ -243,6 +255,98 @@ describe('Material Parameter Calculations', () => {
     })
   })
 
+  describe('E and K pairs', () => {
+    test('calculates mu from E and K', () => {
+      const E = 210e9
+      const K = 175e9
+      const mu = calculateMu_from_E_K(E, K)
+      expect(mu).toBeCloseTo(80.769e9, -7)
+    })
+
+    test('calculates nu from E and K', () => {
+      const E = 210e9
+      const K = 175e9
+      const nu = calculateNu_from_E_K(E, K)
+      expect(nu).toBeCloseTo(0.3, 6)
+    })
+
+    test('calculates lambda from E and K', () => {
+      const E = 210e9
+      const K = 175e9
+      const lambda = calculateLambda_from_E_K(E, K)
+      expect(lambda).toBeCloseTo(121.154e9, -7)
+    })
+  })
+
+  describe('E and Mu pairs', () => {
+    test('calculates nu from E and mu', () => {
+      const E = 210e9
+      const mu = 80e9
+      const nu = calculateNu_from_E_mu(E, mu)
+      expect(nu).toBeCloseTo(0.3125, 4)
+    })
+
+    test('calculates K from E and mu', () => {
+      const E = 210e9
+      const mu = 80e9
+      const K = calculateK_from_E_mu(E, mu)
+      expect(K).toBeCloseTo(186.667e9, -7)
+    })
+
+    test('calculates lambda from E and mu', () => {
+      const E = 210e9
+      const mu = 80e9
+      const lambda = calculateLambda_from_E_mu(E, mu)
+      expect(lambda).toBeCloseTo(133.333e9, -7)
+    })
+  })
+
+  describe('Lambda and Nu pairs', () => {
+    test('calculates E from lambda and nu', () => {
+      const lambda = 121e9
+      const nu = 0.3
+      const E = calculateE_from_lambda_nu(lambda, nu)
+      expect(E).toBeCloseTo(209.733e9, -7)
+    })
+
+    test('calculates mu from lambda and nu', () => {
+      const lambda = 121e9
+      const nu = 0.3
+      const mu = calculateMu_from_lambda_nu(lambda, nu)
+      expect(mu).toBeCloseTo(80.67e9, -7)
+    })
+
+    test('calculates K from lambda and nu', () => {
+      const lambda = 121e9
+      const nu = 0.3
+      const K = calculateK_from_lambda_nu(lambda, nu)
+      expect(K).toBeCloseTo(174.778e9, -7)
+    })
+  })
+
+  describe('Lambda and K pairs', () => {
+    test('calculates E from lambda and K', () => {
+      const lambda = 121e9
+      const K = 175e9
+      const E = calculateE_from_lambda_K(lambda, K)
+      expect(E).toBeCloseTo(210.52e9, -7)
+    })
+
+    test('calculates mu from lambda and K', () => {
+      const lambda = 121e9
+      const K = 175e9
+      const mu = calculateMu_from_lambda_K(lambda, K)
+      expect(mu).toBeCloseTo(81e9, -7)
+    })
+
+    test('calculates nu from lambda and K', () => {
+      const lambda = 121e9
+      const K = 175e9
+      const nu = calculateNu_from_lambda_K(lambda, K)
+      expect(nu).toBeCloseTo(0.2995, 4)
+    })
+  })
+
   describe('Real material examples', () => {
     test('Steel: E=210GPa, nu=0.3', () => {
       const result = calculateAllParameters({ E: 210e9, nu: 0.3 })
@@ -260,6 +364,44 @@ describe('Material Parameter Calculations', () => {
       const result = calculateAllParameters({ E: 0.01e9, nu: 0.48 })
       expect(result.parameters.mu).toBeCloseTo(3.378e6, -4)
       expect(result.parameters.K).toBeCloseTo(83.333e6, -4)
+    })
+  })
+
+  describe('Additional calculateAllParameters cases', () => {
+    test('computes all from E and K', () => {
+      const result = calculateAllParameters({ E: 210e9, K: 175e9 })
+      expect(result.parameters.mu).toBeCloseTo(80.769e9, -7)
+      expect(result.parameters.nu).toBeCloseTo(0.3, 6)
+      expect(result.parameters.lambda).toBeCloseTo(121.154e9, -7)
+    })
+
+    test('computes all from E and mu', () => {
+      const result = calculateAllParameters({ E: 210e9, mu: 80e9 })
+      expect(result.parameters.nu).toBeCloseTo(0.3125, 4)
+      expect(result.parameters.K).toBeCloseTo(186.667e9, -7)
+      expect(result.parameters.lambda).toBeCloseTo(133.333e9, -7)
+    })
+
+    test('computes all from lambda and nu', () => {
+      const result = calculateAllParameters({ lambda: 121e9, nu: 0.3 })
+      expect(result.parameters.E).toBeCloseTo(209.733e9, -7)
+      expect(result.parameters.mu).toBeCloseTo(80.67e9, -7)
+      expect(result.parameters.K).toBeCloseTo(174.778e9, -7)
+    })
+
+    test('computes all from lambda and K', () => {
+      const result = calculateAllParameters({ lambda: 121e9, K: 175e9 })
+      expect(result.parameters.E).toBeCloseTo(210.52e9, -7)
+      expect(result.parameters.mu).toBeCloseTo(81e9, -7)
+      expect(result.parameters.nu).toBeCloseTo(0.2995, 4)
+    })
+
+    test('computes all from lambda and E', () => {
+      const result = calculateAllParameters({ lambda: 121e9, E: 210e9 })
+      expect(result.parameters.mu).toBeDefined()
+      expect(result.parameters.nu).toBeDefined()
+      expect(result.parameters.K).toBeDefined()
+      expect(result.derivations.length).toBeGreaterThan(0)
     })
   })
 })

@@ -14,7 +14,7 @@ interface ResultsPanelProps {
 
 export function ResultsPanel({ parameters, precision }: ResultsPanelProps) {
   const formatValue = (value: number | null, key: string): string => {
-    if (value === null) return '—'
+    if (value === null || value === undefined || !isFinite(value)) return '—'
     if (key === 'nu') {
       return value.toPrecision(precision)
     }

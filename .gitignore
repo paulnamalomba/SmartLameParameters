@@ -25,3 +25,9 @@ dist-ssr
 
 # Testing
 coverage
+
+# Local Netlify folder
+.netlify
+
+# heredoc for Commits
+# .commits/*.txt
