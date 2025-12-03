@@ -9,7 +9,7 @@ Built by [Paul Namalomba](https://github.com/paulnamalomba).
 
 ---
 
-## 🎯 Features
+## Features
 
 - ✅ **Real-time calculation** from any 2 independent elastic parameters (λ, μ, E, K, ν)
 - ✅ **Unit conversion** between Pa, kPa, MPa, and GPa
@@ -25,7 +25,7 @@ Built by [Paul Namalomba](https://github.com/paulnamalomba).
 
 ---
 
-## 📐 Mathematical Background
+## Mathematical Background
 
 This tool implements standard relationships from **linear isotropic elasticity theory**. For an isotropic material, only **2 independent elastic constants** are needed to determine all others.
 
@@ -153,7 +153,7 @@ For stable isotropic materials:
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -216,7 +216,7 @@ npm run type-check
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 smart-lame-parameters/
@@ -256,7 +256,7 @@ smart-lame-parameters/
 
 ---
 
-## 🔧 API Documentation
+## API Documentation
 
 The core calculation functions in `src/calculations.ts` are **pure functions** that can be reused in other projects (Node.js, Python via WASM, etc.).
 
@@ -334,7 +334,7 @@ See `src/calculations.ts` for the complete API.
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 ### Deploy to Netlify
 
@@ -397,7 +397,7 @@ See `src/calculations.ts` for the complete API.
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Unit Tests
 
@@ -432,7 +432,7 @@ test('Steel: E=210GPa, nu=0.3', () => {
 
 ---
 
-## 📝 Usage Examples
+## Usage Examples
 
 ### Story A: Enter λ and ν
 
@@ -469,7 +469,7 @@ test('Steel: E=210GPa, nu=0.3', () => {
 
 ---
 
-## 🛠️ Development Notes
+## Development Notes
 
 ### Numerical Stability
 
@@ -496,7 +496,7 @@ For each pair of inputs, we:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
@@ -526,7 +526,7 @@ SOFTWARE.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Paul Namalomba**
 - GitHub: [@paulnamalomba](https://github.com/paulnamalomba)
@@ -534,7 +534,7 @@ SOFTWARE.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Mathematical formulas based on standard continuum mechanics references
 - Built with React, TypeScript, Vite, and Tailwind CSS
@@ -544,7 +544,7 @@ SOFTWARE.
 
 ---
 
-## 📋 Deployment Checklist
+## Deployment Checklist
 
 - ✅ `npm run build` produces static site in `dist/`
 - ✅ All unit tests pass (`npm test`)
