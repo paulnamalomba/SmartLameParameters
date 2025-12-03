@@ -10,11 +10,11 @@
 
 [![CI/CD Pipeline](https://github.com/paulnamalomba/SmartLameParameters/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/paulnamalomba/SmartLameParameters/actions)
 [![Coverage Status](https://coveralls.io/repos/github/paulnamalomba/SmartLameParameters/badge.svg?branch=main)](https://coveralls.io/github/paulnamalomba/SmartLameParameters?branch=main)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.2-blue.svg)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.0-brightgreen.svg)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-blue.svg)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A production-ready React (TypeScript, React, Vite and Tailwind CSS) web application that **smartly cross-calculates linear isotropic material parameters** from any two independent inputs. Deployed at [www.smartlameparameters.space](https://www.smartlameparameters.space).
 
