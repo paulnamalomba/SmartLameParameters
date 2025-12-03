@@ -171,8 +171,8 @@ For stable isotropic materials:
 
 ```bash
 # Clone the repository
-git clone https://github.com/paulnamalomba/smart-lame-parameters.git
-cd smart-lame-parameters
+git clone https://github.com/paulnamalomba/SmartLameParameters.git
+cd SmartLameParameters
 
 # Install dependencies
 npm install
@@ -226,7 +226,7 @@ npm run type-check
 ## Project Structure
 
 ```
-smart-lame-parameters/
+SmartLameParameters/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml                 # GitHub Actions CI/CD pipeline

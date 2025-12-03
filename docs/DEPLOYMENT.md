@@ -25,7 +25,7 @@ npm install -g netlify-cli
 ### Step 2: Build the Project
 
 ```bash
-cd smart-lame-parameters
+cd SmartLameParameters
 npm install
 npm run build
 ```
@@ -56,7 +56,7 @@ Follow the prompts:
 1. Go to [Netlify Dashboard](https://app.netlify.com/)
 2. Select your site
 3. Go to **Domain settings** → **Add custom domain**
-4. Enter: `smartlameparameters.run.place`
+4. Enter: `smartlameparameters.space`
 5. Follow DNS configuration instructions:
 
    **For DNS provider:**
@@ -93,7 +93,7 @@ npm install -g vercel
 ### Step 2: Build the Project
 
 ```bash
-cd smart-lame-parameters
+cd SmartLameParameters
 npm install
 npm run build
 ```
@@ -377,7 +377,7 @@ aws s3 sync dist-backup/ s3://smartlameparameters.run.place --delete
 ## Support
 
 - **Documentation**: See [README.md](README.md)
-- **Issues**: [GitHub Issues](https://github.com/paulnamalomba/smart-lame-parameters/issues)
+- **Issues**: [GitHub Issues](https://github.com/paulnamalomba/SmartLameParameters/issues)
 - **Author**: [@paulnamalomba](https://github.com/paulnamalomba)
 
 ---

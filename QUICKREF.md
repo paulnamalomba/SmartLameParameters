@@ -179,4 +179,4 @@ For deployment:
 
 ---
 
-**Need help?** Open an issue on [GitHub](https://github.com/paulnamalomba/smart-lame-parameters)
+**Need help?** Open an issue on [GitHub](https://github.com/paulnamalomba/SmartLameParameters)

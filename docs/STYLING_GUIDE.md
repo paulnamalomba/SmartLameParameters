@@ -502,7 +502,7 @@ netlify deploy --prod --dir=dist
 ## Support
 
 - **Documentation:** [README.md](README.md)
-- **Issues:** [GitHub Issues](https://github.com/paulnamalomba/smart-lame-parameters/issues)
+- **Issues:** [GitHub Issues](https://github.com/paulnamalomba/SmartLameParameters/issues)
 
 ---
 

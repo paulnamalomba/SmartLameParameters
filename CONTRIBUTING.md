@@ -81,8 +81,8 @@ test('calculates E from lambda and mu for steel-like values', () => {
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/smart-lame-parameters.git
-cd smart-lame-parameters
+git clone https://github.com/YOUR_USERNAME/SmartLameParameters.git
+cd SmartLameParameters
 
 # Install dependencies
 npm install
