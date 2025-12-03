@@ -1,9 +1,14 @@
 # Smart Lamé Parameters Calculator
 
-<!-- [![CI/CD Pipeline](https://github.com/paulnamalomba/smart-lame-parameters/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/paulnamalomba/smart-lame-parameters/actions) -->
+[![CI/CD Pipeline](https://github.com/paulnamalomba/SmartLameParameters/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/paulnamalomba/SmartLameParameters/actions)
+[![Coverage Status](https://coveralls.io/repos/github/paulnamalomba/SmartLameParameters/badge.svg?branch=main)](https://coveralls.io/github/paulnamalomba/SmartLameParameters?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.2-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0-brightgreen.svg)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-blue.svg)](https://tailwindcss.com/)
 
-A production-ready React (TypeScript, JavaScript, CSS3) web application that **smartly cross-calculates linear isotropic material parameters** from any two independent inputs. Deployed at [www.smartlameparameters.space](https://www.smartlameparameters.space).
+A production-ready React (TypeScript, React, Vite and Tailwind CSS) web application that **smartly cross-calculates linear isotropic material parameters** from any two independent inputs. Deployed at [www.smartlameparameters.space](https://www.smartlameparameters.space).
 
 Built by [Paul Namalomba](https://github.com/paulnamalomba).
 
@@ -11,17 +16,19 @@ Built by [Paul Namalomba](https://github.com/paulnamalomba).
 
 ## Features
 
-- ✅ **Real-time calculation** from any 2 independent elastic parameters (λ, μ, E, K, ν)
-- ✅ **Unit conversion** between Pa, kPa, MPa, and GPa
-- ✅ **Parameter locking** to fix values during recalculation
-- ✅ **Consistency checking** for contradictory inputs
-- ✅ **Derivation trace** showing which formulas were used
-- ✅ **Export** results as JSON or CSV
-- ✅ **Permalink generation** for sharing calculations
-- ✅ **Fully accessible** with ARIA attributes and keyboard navigation
-- ✅ **Responsive design** with Tailwind CSS
-- ✅ **100% TypeScript** with comprehensive type safety
-- ✅ **80%+ test coverage** with Jest and React Testing Library
+- [x] **Real-time calculation** from any 2 independent elastic parameters (λ, μ, E, K, ν)
+- [x] **Unit conversion** between Pa, kPa, MPa, and GPa
+- [x] **Parameter locking** to fix values during recalculation
+- [x] **Consistency checking** for contradictory inputs
+- [x] **Derivation trace** showing which formulas were used
+- [x] **Export** results as JSON or CSV
+- [x] **Permalink generation** for sharing calculations
+- [x] **Fully accessible** with ARIA attributes and keyboard navigation
+- [x] **Responsive design** with Tailwind CSS
+- [x] **100% TypeScript** with comprehensive type safety
+- [x] **80%+ test coverage** with Jest and React Testing Library
+- [x] **CI/CD pipeline** with GitHub Actions
+- [x] **Multiple deployment options**: Netlify, Vercel
 
 ---
 
