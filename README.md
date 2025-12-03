@@ -1,5 +1,13 @@
 # Smart Lamé Parameters Calculator
 
+**Last updated**: December 04, 2025<br>
+**Author**: [Paul Namalomba](https://github.com/paulnamalomba)<br>
+  - SESKA Computational Engineer<br>
+  - Software Developer<br>
+  - PhD Candidate (Civil Engineering Spec. Computational and Applied Mechanics)<br>
+**Version**: 1.0.2 (Dec 2025)<br>
+**Contact**: [kabwenzenamalomba@gmail.com](kabwenzenamalomba@gmail.com)
+
 [![CI/CD Pipeline](https://github.com/paulnamalomba/SmartLameParameters/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/paulnamalomba/SmartLameParameters/actions)
 [![Coverage Status](https://coveralls.io/repos/github/paulnamalomba/SmartLameParameters/badge.svg?branch=main)](https://coveralls.io/github/paulnamalomba/SmartLameParameters?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,8 +17,6 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-blue.svg)](https://tailwindcss.com/)
 
 A production-ready React (TypeScript, React, Vite and Tailwind CSS) web application that **smartly cross-calculates linear isotropic material parameters** from any two independent inputs. Deployed at [www.smartlameparameters.space](https://www.smartlameparameters.space).
-
-Built by [Paul Namalomba](https://github.com/paulnamalomba).
 
 ---
 
