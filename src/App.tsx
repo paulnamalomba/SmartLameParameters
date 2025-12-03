@@ -52,7 +52,7 @@ const parameterInfo: Record<
     label: 'ρ (Density)',
     tooltip:
       'Material density in kg/m³. Optional parameter, not used in elastic calculations. Typical: 100 (foam) to 20000 (heavy metals).',
-    unitOptions: [],
+    unitOptions: ['kg/m³'],
   },
 }
 
