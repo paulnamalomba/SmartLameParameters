@@ -40,6 +40,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Usage examples and user stories
 - Development guidelines
 
+## [1.0.1] - 2025-12-03
+
+### Fixed
+- Bug in unit conversion when switching units with locked parameters
+- Bugs with types and names in calculations.ts and useMaterialCalculator.ts causing ESLint errors
+
 ---
 
 ## Future Releases

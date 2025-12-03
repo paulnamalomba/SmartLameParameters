@@ -326,8 +326,9 @@ export function calculateAllParameters(
   const result: MaterialParameters = { ...input }
 
   // Normalize G to mu
-  if (input.mu === undefined && (input as any).G !== undefined) {
-    result.mu = (input as any).G
+  const inputWithG = input as MaterialParameters & { G?: number }
+  if (input.mu === undefined && inputWithG.G !== undefined) {
+    result.mu = inputWithG.G
   }
 
   // Count independent parameters

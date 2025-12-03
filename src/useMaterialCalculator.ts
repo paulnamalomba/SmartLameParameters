@@ -43,7 +43,7 @@ export function useMaterialCalculator() {
    * Recalculate all parameters based on current inputs.
    */
   const recalculate = useCallback(() => {
-    const inputParams: any = {}
+    const inputParams: Partial<Record<ParameterKey, number>> = {}
     const errors: string[] = []
     const validationErrors: ValidationError[] = []
 
@@ -201,7 +201,7 @@ export function useMaterialCalculator() {
    * Export current state as JSON.
    */
   const exportJSON = useCallback(() => {
-    const data: any = {}
+    const data: Record<string, { value: number; unit: Unit }> = {}
     ;(['lambda', 'mu', 'E', 'K', 'nu', 'rho'] as ParameterKey[]).forEach((key) => {
       if (state[key].value !== null) {
         data[key] = {
@@ -238,7 +238,7 @@ export function useMaterialCalculator() {
    * Generate permalink (base64 encoded state).
    */
   const generatePermalink = useCallback(() => {
-    const data: any = {}
+    const data: Record<string, number | Unit> = {}
     ;(['lambda', 'mu', 'E', 'K', 'nu', 'rho'] as ParameterKey[]).forEach((key) => {
       if (state[key].value !== null) {
         data[key] = state[key].value
@@ -266,6 +266,7 @@ export function useMaterialCalculator() {
     state.K.value,
     state.nu.value,
     state.rho.value,
+    debouncedRecalculate,
   ])
 
   return {
