@@ -12,7 +12,7 @@ Built by [Paul Namalomba](https://github.com/paulnamalomba).
 ## 🎯 Features
 
 - ✅ **Real-time calculation** from any 2 independent elastic parameters (λ, μ, E, K, ν)
-- ✅ **Unit conversion** between Pa and GPa
+- ✅ **Unit conversion** between Pa, kPa, MPa, and GPa
 - ✅ **Parameter locking** to fix values during recalculation
 - ✅ **Consistency checking** for contradictory inputs
 - ✅ **Derivation trace** showing which formulas were used

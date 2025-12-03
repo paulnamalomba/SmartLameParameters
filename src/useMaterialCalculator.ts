@@ -36,6 +36,16 @@ export function useMaterialCalculator() {
     if (from === to) return value
     if (from === 'Pa' && to === 'GPa') return value / 1e9
     if (from === 'GPa' && to === 'Pa') return value * 1e9
+    if (from === 'Pa' && to === 'MPa') return value / 1e6
+    if (from === 'MPa' && to === 'Pa') return value * 1e6
+    if (from === 'MPa' && to === 'GPa') return value / 1e3
+    if (from === 'GPa' && to === 'MPa') return value * 1e3
+    if (from === 'Pa' && to === 'kPa') return value / 1e3
+    if (from === 'kPa' && to === 'Pa') return value * 1e3
+    if (from === 'kPa' && to === 'MPa') return value / 1e3
+    if (from === 'MPa' && to === 'kPa') return value * 1e3
+    if (from === 'kPa' && to === 'GPa') return value / 1e6
+    if (from === 'GPa' && to === 'kPa') return value * 1e6
     return value
   }, [])
 

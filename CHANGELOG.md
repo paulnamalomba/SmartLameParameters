@@ -62,11 +62,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive error display with reload functionality
 - PWA manifest.json for progressive web app support
 - Explicit base path configuration in vite.config.ts
+- Support for kPa and MPa units in addition to Pa and GPa
 
 ### Improved
 - Enhanced production build configuration with optimized rollup options
 - Better error visibility and debugging in production environments
 - Improved user experience with informative error messages instead of blank screens
+- View screen scaling and responsiveness enhancements
 
 ### Documentation
 - Added FIXES.md with detailed bug fix analysis and resolution steps

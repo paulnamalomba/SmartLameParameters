@@ -22,25 +22,25 @@ const parameterInfo: Record<
     label: 'λ (Lamé Parameter)',
     tooltip:
       "Lamé's first parameter. Related to material resistance to volumetric deformation. Can be negative for auxetic materials (ν < 0).",
-    unitOptions: ['Pa', 'GPa'],
+    unitOptions: ['Pa', 'kPa', 'MPa', 'GPa'],
   },
   mu: {
     label: 'μ (Shear Modulus)',
     tooltip:
       'Shear modulus (also called G). Resistance to shear deformation. Must be positive. Typical: 1-100 GPa for common materials.',
-    unitOptions: ['Pa', 'GPa'],
+    unitOptions: ['Pa', 'kPa', 'MPa', 'GPa'],
   },
   E: {
     label: "E (Young's Modulus)",
     tooltip:
       "Young's modulus. Resistance to uniaxial tension/compression. Must be positive. Typical: 0.01 GPa (rubber) to 1000 GPa (diamond).",
-    unitOptions: ['Pa', 'GPa'],
+    unitOptions: ['Pa', 'kPa', 'MPa', 'GPa'],
   },
   K: {
     label: 'K (Bulk Modulus)',
     tooltip:
       'Bulk modulus. Resistance to uniform compression. Must be positive. Typical: 1-400 GPa.',
-    unitOptions: ['Pa', 'GPa'],
+    unitOptions: ['Pa', 'kPa', 'MPa', 'GPa'],
   },
   nu: {
     label: 'ν (Poisson Ratio)',
@@ -52,7 +52,7 @@ const parameterInfo: Record<
     label: 'ρ (Density)',
     tooltip:
       'Material density in kg/m³. Optional parameter, not used in elastic calculations. Typical: 100 (foam) to 20000 (heavy metals).',
-    unitOptions: ['kg/m³'],
+    unitOptions: [],
   },
 }
 

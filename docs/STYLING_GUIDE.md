@@ -1,4 +1,4 @@
-# 🎨 Font Size & Component Size Reduction Guide
+# Font Size & Component Size Reduction Guide
 
 **Project:** Smart Lamé Parameters Calculator  
 **Purpose:** Reduce font sizes and component spacing for a more compact UI  

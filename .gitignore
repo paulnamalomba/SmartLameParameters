@@ -31,3 +31,5 @@ coverage
 
 # heredoc for Commits
 # .commits/*.txt
+.vercel
+.env*.local
