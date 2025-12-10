@@ -1,0 +1,9 @@
+## [1.0.3] - 2025-12-10
+
+### Improved
+- **Mobile Responsiveness:** Optimized layout and typography for mobile devices
+- Adjusted padding and margins for better use of screen space on small screens
+- Scaled down font sizes for headers and inputs on mobile
+- Improved touch targets for buttons and inputs
+- Refined grid layouts to stack gracefully on narrower viewports
+- Code structure improved to fit readibility and scalability standards. Efficient use of components and hooks

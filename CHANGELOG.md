@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Contents
+
+- [Smart Lamé Parameters - Changelog](#smart-lamé-parameters---changelog)
+  - [Contents](#contents)
+  - [\[1.0.0\] - 2025-12-03](#100---2025-12-03)
+    - [Added](#added)
+    - [Technical Details](#technical-details)
+    - [Documentation](#documentation)
+  - [\[1.0.1\] - 2025-12-03](#101---2025-12-03)
+    - [Fixed](#fixed)
+  - [\[1.0.2\] - 2025-12-03](#102---2025-12-03)
+    - [Fixed](#fixed-1)
+    - [Added](#added-1)
+    - [Improved](#improved)
+    - [Documentation](#documentation-1)
+    - [Deployment](#deployment)
+  - [\[1.0.3\] - 2025-12-10](#103---2025-12-10)
+    - [Improved](#improved-1)
+  - [Future Releases](#future-releases)
+    - [\[1.1.0\] - Planned](#110---planned)
+
+---
+
 ## [1.0.0] - 2025-12-03
 
 ### Added
@@ -80,19 +103,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Successfully deployed to Vercel
 - All production deployments verified and operational
 
+## [1.0.3] - 2025-12-10
+
+### Improved
+- **Mobile Responsiveness:** Optimized layout and typography for mobile devices
+- Adjusted padding and margins for better use of screen space on small screens
+- Scaled down font sizes for headers and inputs on mobile
+- Improved touch targets for buttons and inputs
+- Refined grid layouts to stack gracefully on narrower viewports
+- Code structure improved to fit readibility and scalability standards. Efficient use of components and hooks
+
 ---
 
 ## Future Releases
 
 ### [1.1.0] - Planned
-- Least-squares solver for overdetermined systems
+<!-- - Least-squares solver for overdetermined systems
 - Material database with common material presets
-- Improved error messages with suggestions
+- Improved error messages with suggestions -->
 - Dark mode support
 - Keyboard shortcuts
 - Internationalization (i18n) support
 
-### [1.2.0] - Planned
+<!-- ### [1.2.0] - Planned
 - Wave velocity calculations (P-wave, S-wave)
 - 3D visualization of stress-strain relationships
 - Export to PDF with full derivations
@@ -104,4 +137,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Temperature-dependent properties
 - Plasticity and viscoelasticity models
 - Integration with FEA software
-- API for programmatic access
+- API for programmatic access -->

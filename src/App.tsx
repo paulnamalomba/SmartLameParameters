@@ -2,9 +2,10 @@
  * App.tsx
  * Main application component.
  *
- * @author Paul Namalomba (https://github.com/paulnamalomba)
+ * @author Paul Namalomba (https://paulnamalomba.github.io)
  */
 
+// Import stuff (mostly functions and types)
 import { useMaterialCalculator } from './useMaterialCalculator'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
@@ -14,6 +15,7 @@ import { DerivationTrace } from './components/DerivationTrace'
 import { ValidationPanel } from './components/ValidationPanel'
 import { ParameterKey, Unit } from './types'
 
+// Define parameter information for labels, tooltips, and unit options
 const parameterInfo: Record<
   ParameterKey,
   { label: string; tooltip: string; unitOptions?: Unit[] }
@@ -56,8 +58,12 @@ const parameterInfo: Record<
   },
 }
 
+// Main application component
 function App() {
+
+  // Destructure state and action functions from the custom hook
   const {
+
     state,
     updateParameter,
     toggleLock,
@@ -67,9 +73,12 @@ function App() {
     exportJSON,
     exportCSV,
     generatePermalink,
+
   } = useMaterialCalculator()
 
+  // Function to handle exporting JSON file
   const handleExportJSON = () => {
+
     const json = exportJSON()
     const blob = new Blob([json], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
@@ -78,9 +87,12 @@ function App() {
     a.download = 'material-parameters.json'
     a.click()
     URL.revokeObjectURL(url)
+
   }
 
+  // Function to handle exporting CSV file
   const handleExportCSV = () => {
+
     const csv = exportCSV()
     const blob = new Blob([csv], { type: 'text/csv' })
     const url = URL.createObjectURL(blob)
@@ -89,32 +101,42 @@ function App() {
     a.download = 'material-parameters.csv'
     a.click()
     URL.revokeObjectURL(url)
+
   }
 
+  // Function to handle copying permalink to clipboard
   const handleCopyPermalink = async () => {
+
     const link = generatePermalink()
     try {
+
       await navigator.clipboard.writeText(link)
       alert('Permalink copied to clipboard!')
+
     } catch (err) {
+
       prompt('Copy this link:', link)
+
     }
+
   }
 
+  // Junky HTML/JSX code for the App (with Tailwind CSS classes)
   return (
+
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-2 sm:px-4 py-4 sm:py-6 md:py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {/* Left Column: Inputs */}
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-bold text-gray-800">Input Parameters</h2>
+          <div className="space-y-4 sm:space-y-6">
+            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg shadow-md border border-gray-200">
+              <div className="flex justify-between items-center mb-4 sm:mb-6">
+                <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800">Input Parameters</h2>
                 <button
                   onClick={clearAll}
-                  className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors shadow-sm"
+                  className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-xs sm:text-sm md:text-base bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors shadow-sm"
                   aria-label="Clear all inputs"
                 >
                   Clear All
@@ -138,8 +160,8 @@ function App() {
                 />
               ))}
 
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <label htmlFor="precision" className="block font-medium text-gray-700 mb-2">
+              <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200">
+                <label htmlFor="precision" className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                   Display Precision (significant digits)
                 </label>
                 <input
@@ -160,24 +182,24 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">Export & Share</h2>
-              <div className="flex flex-wrap gap-3">
+            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg shadow-md border border-gray-200">
+              <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-3 sm:mb-4">Export & Share</h2>
+              <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3">
                 <button
                   onClick={handleExportJSON}
-                  className="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors shadow-sm"
+                  className="w-full sm:w-auto px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors shadow-sm"
                 >
                   Download JSON
                 </button>
                 <button
                   onClick={handleExportCSV}
-                  className="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors shadow-sm"
+                  className="w-full sm:w-auto px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors shadow-sm"
                 >
                   Download CSV
                 </button>
                 <button
                   onClick={handleCopyPermalink}
-                  className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors shadow-sm"
+                  className="w-full sm:w-auto px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors shadow-sm"
                 >
                   Copy Permalink
                 </button>
@@ -186,7 +208,7 @@ function App() {
           </div>
 
           {/* Right Column: Results */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <ResultsPanel parameters={state} precision={state.precision} />
             <DerivationTrace derivations={state.derivations} />
             <ValidationPanel errors={state.errors} warnings={state.warnings} />
@@ -194,14 +216,14 @@ function App() {
         </div>
 
         {/* Documentation Section */}
-        <div className="mt-12 bg-white p-8 rounded-lg shadow-md border border-gray-200">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">About This Tool</h2>
-          <div className="prose max-w-none text-gray-700 space-y-4">
+        <div className="mt-6 sm:mt-8 md:mt-12 bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md border border-gray-200">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">About This Tool</h2>
+          <div className="prose max-w-none text-gray-700 space-y-3 sm:space-y-4 text-sm sm:text-base">
             <p>
               This tool computes all isotropic linear elastic material parameters from any two
               independent inputs. It uses standard relationships from continuum mechanics.
             </p>
-            <h3 className="text-xl font-semibold text-gray-800 mt-6">Key Features</h3>
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mt-4 sm:mt-6">Key Features</h3>
             <ul className="list-disc list-inside space-y-2">
               <li>
                 <strong>Real-time calculation:</strong> Enter any 2 parameters and see all others
@@ -220,7 +242,7 @@ function App() {
                 <strong>Export:</strong> Download results as JSON/CSV or share via permalink
               </li>
             </ul>
-            <h3 className="text-xl font-semibold text-gray-800 mt-6">Usage Tips</h3>
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mt-4 sm:mt-6">Usage Tips</h3>
             <ul className="list-disc list-inside space-y-2">
               <li>Enter values for at least 2 elastic parameters (λ, μ, E, K, or ν)</li>
               <li>
@@ -236,7 +258,9 @@ function App() {
 
       <Footer />
     </div>
+
   )
+  
 }
 
 export default App

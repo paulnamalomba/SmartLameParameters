@@ -1,11 +1,12 @@
 # Smart Lamé Parameters Calculator
 
+**App website**: [www.smartlameparameters.space](https://www.smartlameparameters.space)<br>
 **Last updated**: December 04, 2025<br>
-**Author**: [Paul Namalomba](https://github.com/paulnamalomba)<br>
+**Author & Developer**: [Paul Namalomba](https://paulnamalomba.github.io/)<br>
   - SESKA Computational Engineer<br>
   - Software Developer<br>
   - PhD Candidate (Civil Engineering Spec. Computational and Applied Mechanics)<br>
-**Version**: 1.0.2 (Dec 2025)<br>
+**Version**: 1.0.3 (Dec 2025)<br>
 **Contact**: [kabwenzenamalomba@gmail.com](kabwenzenamalomba@gmail.com)
 
 [![CI/CD Pipeline](https://github.com/paulnamalomba/SmartLameParameters/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/paulnamalomba/SmartLameParameters/actions)
@@ -17,6 +18,55 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A production-ready React (TypeScript, React, Vite and Tailwind CSS) web application that **smartly cross-calculates linear isotropic material parameters** from any two independent inputs. Deployed at [www.smartlameparameters.space](https://www.smartlameparameters.space).
+
+## Contents
+
+- [Smart Lamé Parameters Calculator](#smart-lamé-parameters-calculator)
+  - [Contents](#contents)
+  - [Features](#features)
+  - [Mathematical Background](#mathematical-background)
+    - [Core Parameters](#core-parameters)
+    - [Key Relationships](#key-relationships)
+      - [From λ and μ:](#from-λ-and-μ)
+      - [From E and ν:](#from-e-and-ν)
+      - [From μ and ν:](#from-μ-and-ν)
+      - [From K and ν:](#from-k-and-ν)
+      - [From K and μ:](#from-k-and-μ)
+      - [From E and μ:](#from-e-and-μ)
+      - [From E and K:](#from-e-and-k)
+    - [Physical Constraints](#physical-constraints)
+  - [Quick Start](#quick-start)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Development](#development)
+    - [Build](#build)
+    - [Testing](#testing)
+    - [Linting \& Formatting](#linting--formatting)
+  - [Project Structure](#project-structure)
+  - [API Documentation](#api-documentation)
+    - [Main Functions](#main-functions)
+      - [`calculateAllParameters(input: MaterialParameters): CalculationResult`](#calculateallparametersinput-materialparameters-calculationresult)
+      - [`checkConsistency(params: MaterialParameters, tolerance?: number): string[]`](#checkconsistencyparams-materialparameters-tolerance-number-string)
+    - [Individual Calculation Functions](#individual-calculation-functions)
+  - [Deployment](#deployment)
+    - [Deploy to Netlify](#deploy-to-netlify)
+    - [Deploy to Vercel](#deploy-to-vercel)
+    - [Deploy to AWS S3 + CloudFront](#deploy-to-aws-s3--cloudfront)
+  - [Testing](#testing-1)
+    - [Unit Tests](#unit-tests)
+    - [Example Test](#example-test)
+  - [Usage Examples](#usage-examples)
+    - [Story A: Enter λ and ν](#story-a-enter-λ-and-ν)
+    - [Story B: Enter E and ν](#story-b-enter-e-and-ν)
+    - [Story C: Inconsistent Inputs](#story-c-inconsistent-inputs)
+  - [Development Notes](#development-notes)
+    - [Numerical Stability](#numerical-stability)
+    - [Algebraic Inversion Strategy](#algebraic-inversion-strategy)
+    - [Future Enhancements](#future-enhancements)
+  - [License](#license)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
+  - [Deployment Checklist](#deployment-checklist)
 
 ---
 
@@ -576,4 +626,4 @@ SOFTWARE.
 
 ---
 
-**Ready for production deployment at www.smartlameparameters.space! 🚀**
+**Visit [www.smartlameparameters.space](https://www.smartlameparameters.space)!**

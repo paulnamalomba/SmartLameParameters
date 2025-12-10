@@ -2,7 +2,7 @@
  * validators.ts
  * Input validation and physical bounds checking for material parameters.
  *
- * @author Paul Namalomba (https://github.com/paulnamalomba)
+ * @author Paul Namalomba (https://paulnamalomba.github.io)
  */
 
 export interface ValidationError {

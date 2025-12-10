@@ -11,7 +11,7 @@
  * - λ = Eν / ((1 + ν)(1 - 2ν))
  * - K = E / (3(1 - 2ν))
  *
- * @author Paul Namalomba (https://github.com/paulnamalomba)
+ * @author Paul Namalomba (https://paulnamalomba.github.io)
  */
 
 const EPSILON = 1e-12 // Tolerance for numerical comparisons

@@ -2,6 +2,24 @@
 
 Thank you for your interest in contributing! This document provides guidelines for contributing to the project.
 
+## Contents
+
+- [Contributing to Smart Lamé Parameters](#contributing-to-smart-lamé-parameters)
+  - [Contents](#contents)
+  - [Code of Conduct](#code-of-conduct)
+  - [How to Contribute](#how-to-contribute)
+    - [Reporting Bugs](#reporting-bugs)
+    - [Suggesting Enhancements](#suggesting-enhancements)
+    - [Pull Requests](#pull-requests)
+    - [Code Style](#code-style)
+    - [Testing](#testing)
+    - [Documentation](#documentation)
+  - [Development Setup](#development-setup)
+  - [Project Structure](#project-structure)
+  - [Questions?](#questions)
+
+---
+
 ## Code of Conduct
 
 This project follows a simple code of conduct:
