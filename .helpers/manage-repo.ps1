@@ -196,7 +196,7 @@ function Invoke-GitTag {
     }
     
     # Create annotated tag with message from file
-    $tagMessageFile = Join-Path $PSScriptRoot "$VersionNumber.txt"
+    $tagMessageFile = Join-Path $PSScriptRoot "..\.commits\$VersionNumber.txt"
     git tag -as $VersionNumber -F $tagMessageFile
     
     if ($LASTEXITCODE -eq 0) {
