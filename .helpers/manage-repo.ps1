@@ -288,7 +288,7 @@ function Invoke-Release {
     # Write-Host "========================================" -ForegroundColor Green
     Write-Host ""
     Write-Info "View release on GitHub:"
-    Write-Host "  https://github.com/computemore/ecoride/releases/tag/$VersionNumber" -ForegroundColor Cyan
+    Write-Host "  https://github.com/paulnamalomba/SmartLameParameters/releases/tag/$VersionNumber" -ForegroundColor Cyan
     Write-Host ""
 }
 

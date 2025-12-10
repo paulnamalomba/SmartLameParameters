@@ -3,7 +3,7 @@
  * Display computed results.
  *
  * @author Paul Namalomba (https://paulnamalomba.github.io)
- * /
+ */
 // Import stuff (mostly functions and types)
 import { ParameterState } from '../types'
 
